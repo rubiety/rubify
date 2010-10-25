@@ -1,0 +1,13 @@
+= Rubiety's Rubify for Rubyists
+
+This is a placeholder gem only!  Do not use!
+
+== What this Eventually Will Be
+
+Eventually this will be a tool that uses Ruby Scribe to take abstract syntax trees from other languages (such as Java), transform them into Ruby, apply some other "idiomizing" transformations once in Ruby AST, then finally emit nicely-formatted Ruby code using ruby_scribe.  When converting a java project to Ruby imagine first being able to do this:
+
+$ rubify java legacy_project.jar
+
+Or perhaps even crazier:
+
+$ rubify csharp legacy_project/
