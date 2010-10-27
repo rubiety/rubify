@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = "Takes parsed s-expressions for other languages and emits formatted ruby using ruby_scribe."
   s.description = "Takes parsed s-expressions for other languages and emits formatted ruby using ruby_scribe."
   
+  s.executables = ["rubify"]
   s.files        = Dir["{lib,spec}/**/*", "[A-Z]*", "init.rb"]
   s.require_path = "lib"
   
