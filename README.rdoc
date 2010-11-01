@@ -1,13 +1,26 @@
-= Rubiety's Rubify for Rubyists
+= Rubify
 
-This is a placeholder gem only!  Do not use!
+This is a collection of tools to grab abstract syntax trees from other languages (using external parsers) and convert them into Ruby.  From there we can perform some idiomizing transformations, and then spit out cleanly-formatted Ruby code from ruby_scribe.
 
-== What this Eventually Will Be
+== Requirements
 
-Eventually this will be a tool that uses Ruby Scribe to take abstract syntax trees from other languages (such as Java), transform them into Ruby, apply some other "idiomizing" transformations once in Ruby AST, then finally emit nicely-formatted Ruby code using ruby_scribe.  When converting a java project to Ruby imagine first being able to do this:
+This gem requires jruby as we currently extract AST's using Eclipse's solid language parser / AST interface.  
+Also required is ruby_scribe which can be used to write out ruby files.
 
-$ rubify java legacy_project.jar
+== Usage
 
-Or perhaps even crazier:
+=== Rubifying PHP Files
+  
+  # Cat out the Ruby version of a PHP file
+  $ rubify cat php my_file.php
+  
+  # Convert a file or directory of PHP files and converts to Ruby
+  $ rubify convert php my_php_project new_ruby_project
 
-$ rubify csharp legacy_project/
+=== Rubifying Java Files
+
+  # Cat out the Ruby version of a PHP file
+  $ rubify cat php my_file.php
+  
+  # Convert a file or directory of PHP files and converts to Ruby
+  $ rubify convert php my_php_project new_ruby_project
